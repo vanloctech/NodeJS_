@@ -15,17 +15,17 @@
     <script src="javascripts/jquery-3.3.1.min.js"></script>
     <script src="socket.io/socket.io.js"></script>
     <script>
-        $(function () {
-            var socket = io();
-            $('form').submit(function(){
-                socket.emit('chat message', $('#m').val());
-                $('#m').val('');
-                return false;
-            });
-            socket.on('res message', function(msg){
-                $('#messages').append($("<li></li>").text(msg));
-            });
-        });
+        // $(function () {
+        //     var socket = io();
+        //     $('form').submit(function(){
+        //         socket.emit('chat message', $('#m').val());
+        //         $('#m').val('');
+        //         return false;
+        //     });
+        //     socket.on('res message', function(msg){
+        //         $('#messages').append($("<li></li>").text(msg));
+        //     });
+        // });
     </script>
 </head>
 <body>

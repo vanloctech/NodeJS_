@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="javascripts/jquery-3.3.1.min.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script>
+        // $(function () {
+        var socket = io();
+        //     $('form').submit(function () {
+        //         socket.emit('chat message', $('#m').val());
+        //         $('#m').val('');
+        //         return false;
+        //     });
+        //     socket.on('res message', function (msg) {
+        //         $('#messages').append($("<li></li>").text(msg));
+        //     });
+        // });
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         var n = 15;
+        // $("body").attr('disable','disable');
+        // $( "div" ).unbind("click");
         function content() {
-            var width = (n*40) + (n*2);
-            $("#wrapper").css("width", width+"px");
+            var width = (n * 40) + (n * 2);
+            $("#wrapper").css("width", width + "px");
             $("#wrapper").css("margin", "auto");
         }
 
@@ -20,6 +37,8 @@
                     $("#wrapper").append("<div class='oco' id='oco" + i + "-" + j + "'></div>");
             }
 
+            // $("*").unbind("click");
+
             $('.oco').css("width", "40px");
             $('.oco').css("height", "40px");
             $('.oco').css("background-color", "#ECA2F0");
@@ -32,39 +51,41 @@
             $('.oco').css("font-size", "2em");
 
             var count = 0;
-            var iran = (n + 1) / 2;
-            var jran = (n + 1) / 2;
-            $("#wrapper #oco" + iran + "-" + jran).html("<img class='o' src='image/o.png' alt='o' height='20' width='20'>");
 
             $(".oco").click(function () {
-                if ($(this).html() == "") {
-                    $(this).html("<img class='x' src='image/x.png' alt='x' height='20' width='20'>");
-                    var rantest = $("#wrapper #oco" + iran + "-" + jran).html();
-                    while (rantest != "") {
-                        iran = Math.floor((Math.random() * n) + 1);
-                        jran = Math.floor((Math.random() * n) + 1);
-                        rantest = $("#wrapper #oco" + iran + "-" + jran).html();
-                    }
-                    $("#wrapper #oco" + iran + "-" + jran).html("<img src='image/o.png' alt='o' height='20' width='20'>");
-//                        var abc = $("#wrapper #oco"+iran+"-"+jran).attr("id");
-//                        alert(abc);
-//                        alert(ab);
-                    //$('#'+iran+'-'+jran).html("<img src='image/o.png' alt='o' height='20' width='20'>");
-                    iran = Math.floor((Math.random() * n) + 1);
-                    jran = Math.floor((Math.random() * n) + 1);
-
-                    var temp = 0;
-
-                    for (var i = 1; i <= n; i++) {
-                        temp = 0;
-                        for (var j = 1; j <= n; j++)
-                        {
-                        }
-                    }
+                if (count % 2 == 0) {
+                    var ctemp = $(this).attr('id');
+                    var id = socket.id;
+                    socket.emit('chat message', {
+                        msgtex: "<img src='./images/o.png' alt='o' height='20' width='20'>",
+                        coun: count,
+                        ele: ctemp,
+                        id: id
+                    });
+                    // $('#wrapper').css('pointer-events', 'none');
+                    return false;
                 }
-//                    else {
-//                        $(this).html("<img src='image/o.png' alt='o' height='20' width='20'>");
-//                    }
+                else {
+                    var ctemp = $(this).attr('id');
+                    var id = socket.id;
+                    socket.emit('chat message', {
+                        msgtex: "<img src='./images/x.png' alt='x' height='20' width='20'>",
+                        coun: count,
+                        ele: ctemp,
+                        id: id
+                    });
+                    // $('#wrapper').css('pointer-events', 'none');
+                    return false;
+                }
+
+            });
+            socket.on('res message', function (msg) {
+                $("#" + msg.ele).html(msg.msgtex);
+                // if (msg.tabc == msg.id)
+                    // $('#wrapper').css('pointer-events', 'none');
+                // else $('#wrapper').css('pointer-events', 'auto');
+                // alert(msg.abc);
+                count = msg.coun;
             });
 
             $(".oco").mouseover(function () {
@@ -79,7 +100,6 @@
     </script>
 </head>
 <body>
-
 <div id="wrapper"></div>
 </body>
 </html>
