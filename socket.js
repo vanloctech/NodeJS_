@@ -6,7 +6,7 @@ var socket_server_client = (server) => {
         console.log("Co nguoi dang ket noi: " + client.id);
 
         client.on('chat message', function(msg){
-            io.emit('chat message', client.id + ": " + msg);
+            io.emit('res message', client.id + ": " + msg);
         });
 
         client.on("disconnect", function () {
