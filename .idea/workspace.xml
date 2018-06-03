@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="231229c3-36c7-4043-8ee3-4a921ff14332" name="Default" comment="v1.1">
-      <change afterPath="$PROJECT_DIR$/public/images/o.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/x2.png" afterDir="false" />
+    <list default="true" id="231229c3-36c7-4043-8ee3-4a921ff14332" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket.js" beforeDir="false" afterPath="$PROJECT_DIR$/socket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/chat.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/chat.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/tictoe.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/tictoe.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,8 +19,8 @@
       <file leaf-file-name="socket.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/socket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+            <state relative-caret-position="238">
+              <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -189,7 +182,7 @@
       <workItem from="1528006787888" duration="273000" />
       <workItem from="1528009892170" duration="628000" />
       <workItem from="1528015351789" duration="4430000" />
-      <workItem from="1528019847612" duration="25899000" />
+      <workItem from="1528019847612" duration="26152000" />
     </task>
     <task id="LOCAL-00001" summary="v1.1">
       <created>1528039627698</created>
@@ -198,22 +191,29 @@
       <option name="project" value="LOCAL" />
       <updated>1528039627698</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="v1.2">
+      <created>1528046683139</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1528046683139</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31230000" />
+    <option name="totallyTimeSpent" value="31483000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" sideWeight="0.49926794" visible="true" weight="0.32868218" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.50073206" side_tool="true" visible="true" weight="0.32868218" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.2263566" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.427907" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.427907" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
@@ -247,7 +247,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.1" />
+    <MESSAGE value="v1.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/routes/index.js">
@@ -372,8 +373,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/socket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        <state relative-caret-position="238">
+          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
         </state>
       </provider>
     </entry>
